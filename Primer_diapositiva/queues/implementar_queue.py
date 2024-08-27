@@ -24,8 +24,6 @@ def shiftStack(stack):
         stack.append(stack2.pop())
     
 shiftStack(stackQueue)
-shiftStack(stackQueue)
-shiftStack(stackQueue)
 
 print(stackQueue)
         
