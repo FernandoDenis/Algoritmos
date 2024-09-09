@@ -21,12 +21,11 @@ for i in cadena:
             sumaRepeticiones = max(palabrasEnCadena[palabra].keys()) + 1
             # Elimina por medio de pop el subdiccionario dentro de la palabra y devuelve un array que son las posiciones de la palabra
             arrayCadena = palabrasEnCadena[palabra].pop(max(palabrasEnCadena[palabra].keys()))
-            # Agrega la nueva posicion de la palabra
             arrayCadena.append(posicion)
             # Al no existir el subdiccionario de la palabra, le actualiza los datos con la suma de repeticiones y el numero array de cadena
             palabrasEnCadena[palabra][sumaRepeticiones] = arrayCadena
 
-        # Condicion por si la palabra SI se encuentra en el diccionario    
+        # Condicion por si la palabra NO se encuentra en el diccionario    
         elif not((palabra in palabrasEnCadena)) and palabra != "":
             posicion += 1
             # Crea un diccionario como valor para agregar los campos de numero de repeticiones y posicion
@@ -34,7 +33,6 @@ for i in cadena:
             # Declara como primer valor 1 dentro del array la posicion de esa palabra
             palabrasEnCadena[palabra][1] = [posicion]
         
-        # Se borra la palabra porque habra terminado la palabra
         palabra = ""
         continue
     else:
