@@ -21,7 +21,6 @@ class BitVector:
 
         return (self.vector[indxArray] & (1 << indxBit) != 0)
     
-    # incompleto
     def nextFalse(self,numeroEnt):
         # Se le suma 1 para empezar a comparar desde el siguiente bit
         numeroEnt += 1
@@ -66,15 +65,18 @@ class BitVector:
         indxArray = 0
         indxBit = 0
 
+        # Compara si la posicion 'n' del array esta todos en 1's o no
         while(self.vector[indxArray] == ((1 << self.wordSize) - 1)):
             indxArray += 1
 
+            # Condicion para que el indice del array no sobrepase las posiciones del vector 
             if(indxArray >= self.size):
                 return False
-        
+        # Cuando encuentra la posicion del array revisa bit pot bit para encontrar el 0
         while(self.vector[indxArray] & (1 << indxBit) != 0):
             indxBit += 1
 
+        # Retorna el bit en 0 en decimal
         return indxBit + (indxArray * self.wordSize)
 
         
