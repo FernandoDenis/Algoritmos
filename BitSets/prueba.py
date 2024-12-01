@@ -1,7 +1,7 @@
 
 from usandoBitsets import BitVector
 
-prueba = BitVector(70000000)
+prueba = BitVector(4300000000)
 
 print("Empieza")
 

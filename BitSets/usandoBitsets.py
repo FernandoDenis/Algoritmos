@@ -3,7 +3,7 @@ binNumber = 0b00001010
 class BitVector:
     def __init__(self, size):
         self.size = size
-        self.vector = [0] * size
+        self.vector = [0] * ((size // 64) + 1)
         self.wordSize = 64
 
     def set(self,numeroEnt):
